@@ -1,0 +1,11 @@
+(Largest Element in Array) A nonempty array DATA with N numerical values is
+given. This algorithm ﬁnds the location LOC and the value MAX of the largest
+element of DATA. The variable K is used as counter
+
+Step 1. [Initialize] Set K:=0,LOC:=0 and MAX:=DATA[0]
+Step 2. [Increment Counter] Set K:= K+1
+Step 3. [Test Counter] If K>N,Then:
+            Write LOC,MAX and exit.
+Step 4. [Compare and Update] If DATA[k]>MAX, then:
+            Set MAX:=DATA[K],LOC:=K
+Step 5. [Reapeat Loop] Goto Step 2
