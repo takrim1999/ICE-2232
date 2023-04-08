@@ -1,0 +1,50 @@
+Heres the algorithms for operations used in Linear Arrays
+1. Traversing
+    [Using While loop with Array A]    
+    
+    Step 1. [Initialize counter] Set K := LB
+    Step 2. [repeatation with while loop] Repeat step 3 and 4 While A[K] <= UB
+    Step 3.     [Opening elements] Apply PROCESS to A[K]
+    Step 4.     [Incriment the counter] Set K := K + 1
+    Step 5. [After completing Step 2 loop] Exit.
+
+    [Using For loop with Array A] 
+    Step 1. [repeatation using for loop] Repeat step 2 for K := LB to UB
+    Step 2.     [Opening elements] Apply PROCESS to A[K]
+    Step 3. [After completing Step 1 loop] Exit.
+
+2. Searching
+    As a very big part it'll be completed in another folder
+
+3. Insertion
+    INSERT(LA,N,K,ITEM) [Insert ITEM at Kth element of LA[N]]
+
+    Step 1. [Initialize counter] Set J := K
+    Step 2. [Loop] Repeat Step 3 and 4 While J >= K
+    Step 3.     [Move elements downward] Set LA[J+1] := LA[J]
+    Step 4.     [Decreament counter] Set J = J - 1
+                [After completing Loop of Step 2]
+    Step 5. [Inserting element] Set LA[K] := ITEM
+    Step 6. [Reset size] Set N = N + 1
+    Step 7. Exit 
+
+4. Deletion
+    DELETE(LA,N,K,ITEM) [Delete Kth element from LA[N]]
+
+    Step 1. [Keeping the element going be deleted] Set ITEM := LA[K]
+    Step 2. [Using for loop to repeat] Repeat Step 3 for Set J = K to N-1
+    Step 3.     [Moving elements upward] LA[J]=LA[J+1]
+                [End of loop from Step 2]
+    Step 4. [Reset size] N = N - 1
+    Step 5. Exit
+
+5. Updating
+    UPDATE(LA,N,K,ITEM) [Update Kth element of LA[N] with ITEM]
+
+    Step 1. [change element of Kth position with ITEM] Set LA[K] := ITEM
+    Step 2. Exit
+
+6. Sorting
+    As a very big part it'll be completed in another folder
+7. Merging
+    As a very big part it'll be completed in another folder
