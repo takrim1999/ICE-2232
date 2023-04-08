@@ -14,7 +14,33 @@ Heres the algorithms for operations used in Linear Arrays
     Step 3. [After completing Step 1 loop] Exit.
 
 2. Searching
-    As a very big part it'll be completed in another file
+    1. Linear Search => LINEAR(DATA,N,LOC,ITEM)
+
+        Step 1. [Initialize] Set LOC := 1
+        Step 2. [Traversing] Repeat Step 3 and 4 While LOC <= N
+        Step 3.     [Conditioning] If DATA[LOC] = ITEM
+                        Write LOC
+                        BREAK
+                    [End of If block]
+                [End of loop of Step 2]
+        Step 4. Exit
+
+    2. Binary Search => BINARY(DATA,UB,LB,ITEM,LOC)
+
+        Step 1. [Initializing] Set BEG := LB, END := UB, MID := INT((BEG+END)/2)
+        Step 2. [Loop] Repeat Step 3 and 4 While BEG <= END and DATA[MID] != ITEM
+        Step 3.     If DATA[MID] > ITEM:
+                        Set END := MID - 1
+                    else:
+                        Set BEG := BEG + 1
+                    [End of If]
+        Step 4. MID = INT((BEG+END)/2)
+                [End of loop from Step 2]
+        Step 5. If DATA[MID] = ITEM:
+                    Set LOC := MID
+                else:
+                    Set LOC := NULL
+        Step 6. Exit
 
 3. Insertion
     INSERT(LA,N,K,ITEM) [Insert ITEM at Kth element of LA[N]]
@@ -45,6 +71,18 @@ Heres the algorithms for operations used in Linear Arrays
     Step 2. Exit
 
 6. Sorting
-    As a very big part it'll be completed in another file
+    Bubble Sort => BUBBLE(DATA,N)
+
+    Step 1. Repeat Step 2 and 3 for K = 1 to N - 1
+    Step 2.     [Initializing pass pointer] Set PTR := 1
+    Step 3.     [comparing and swapping loop] while PTR <= N - K
+                    (a) if DATA[PTR] > DATA[PTR + 1] then
+                            [swapping] Interchange DATA[PTR] and DATA[PTR + 1]
+                    (b) Set PTR := PTR + 1
+                    [End of IF block]
+                [End of Inner Loop]
+            [End of Outer loop od Step 1]
+    Step 4. Exit.
+
 7. Merging
     As a very big part it'll be completed in another file
