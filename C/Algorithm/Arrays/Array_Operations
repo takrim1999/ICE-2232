@@ -14,7 +14,7 @@ Heres the algorithms for operations used in Linear Arrays
     Step 3. [After completing Step 1 loop] Exit.
 
 2. Searching
-    As a very big part it'll be completed in another folder
+    As a very big part it'll be completed in another file
 
 3. Insertion
     INSERT(LA,N,K,ITEM) [Insert ITEM at Kth element of LA[N]]
@@ -45,6 +45,6 @@ Heres the algorithms for operations used in Linear Arrays
     Step 2. Exit
 
 6. Sorting
-    As a very big part it'll be completed in another folder
+    As a very big part it'll be completed in another file
 7. Merging
-    As a very big part it'll be completed in another folder
+    As a very big part it'll be completed in another file
