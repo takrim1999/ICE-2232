@@ -7,11 +7,38 @@ int N = 10;
 int DATA[10] = {9, 1, 2, 5, 3, 4, 0, 7, 6, 8};
 int main()
 {
+    int choice;
+    printf("choose options:\n1. Show Array\n2. Linear Search\n3. Binary Search\n4. Bubble Sort\n5. Insertion\n6. Deletion\n>");
+    scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        show();
+        break;
+    case 2:
+        linear();
+        break;
+    case 3:
+        binary();
+        break;
+    case 4:
+        bubble();
+        break;
+    case 5:
+        insert();
+        break;
+    case 6:
+        del();
+        break;
+    default:
+        printf("Wrong input please run again\n");
+        break;
+    }
     // linear();
     // binary();
     // bubble();
     // insert();
-    del();
+    // del();
 
     return 0;
 }
@@ -139,4 +166,13 @@ void del()
     }
     printf("\n");
     printf("%d is deleted", ITEM);
+}
+
+void show()
+{
+    for (int i = 0; i < N; i++)
+    {
+        printf("%d", DATA[i]);
+    }
+    printf("\n");
 }
