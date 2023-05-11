@@ -1,0 +1,45 @@
+1. Searching
+    
+    (i) Linear Search [LINEAR(DATA,N,ITEM,LOC)]:
+        Step 1. [Initializing Counter] LOC:=1
+        Step 2. [looping through whole array] Repeat Step 2 and 3 while LOC<N
+            Step 3. [Compare] If DATA[LOC] = ITEM, then print LOC and end
+            Step 4. [Increment Counter] Set LOC := LOC + 1
+            [End of Step 2 loop]
+        Step 3. [Check end of array] If LOC = N, then print "Item not found"
+        Step 4. End
+    
+    (ii) Binary Search [BINARY(DATA,LB,UB,ITEM,LOC)]
+        Step 1. [Initializing Operators] Set START := LB,END := UB; LOC := INT((START+END)/2)
+        Step 2. [looping] Repeat Step 3 and 4 while START <= END and DATA[LOC] != ITEM
+            Step 3. If DATA[LOC]>ITEM, then Set END := LOC
+                    else If DATA[LOC]<ITEM, then Set START := LOC
+                    [end of if]
+            Step 4. LOC := INT((START+END)/2)
+            [end of Step 2 loop]
+        Step 5. If DATA[LOC] = ITEM then print LOC
+        Step 6. End
+
+2. Sorting
+    BUBBLE(DATA,N)
+    
+    Step 1. Repeat Step 2 and 3 for K=1 to N
+        Step 2. Repeat Step 3 for J=1 to N-1
+            Step 3. If DATA[J]>DATA[J+1] then Swap DATA[J] and DATA[J+1]
+        [end loop]
+    [end loop]
+    Step 4. End
+
+3. Insertion
+    INSERT(DATA,N,LOC,ITEM)
+    Step 1. [Initializing] Take input for insert position LOC and item ITEM
+    Step 2. Set DATA[i] = DATA[i - 1] for K := LOC to not
+    Step 3. Set N := N+1
+    Step 4. End 
+
+4. Deletion
+    DEL(DATA,N,LOC,ITEM)
+    Step 1. Take input for insert position LOC
+    Step 2. Set ITEM := DATA[LOC] N := N-1
+    Step 3. DATA[i] = DATA[i + 1] for K := position to not
+    Step 4. End
