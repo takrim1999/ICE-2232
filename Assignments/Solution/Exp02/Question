@@ -1,0 +1,4 @@
+0. Write a program to create a dynamic linked list. and perform operations:
+    1. Traversing, simply print values.
+    2. Insert a new node to begining, end and middle of the linked list
+    3. Delete a given node from linked list
