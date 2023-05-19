@@ -13,11 +13,14 @@ void print_list(struct node *list)
     {
         printf("List is empty\n");
     }
-    point = list;
-    while (point != NULL)
+    else
     {
-        printf("%d\,", point->data);
-        point = point->next;
+        point = list;
+        while (point != NULL)
+        {
+            printf("%d\,", point->data);
+            point = point->next;
+        }
     }
 }
 
@@ -98,20 +101,40 @@ void delete_node(struct node **list, int pos)
 int main()
 {
     struct node *head, *current;
-    head = (struct node *)malloc(sizeof(struct node));
-    head->data = 10;
-    head->next = NULL;
-    // 1. traversing printing values
-    // print_list(head);
-    // 2. insert at end
-    insert_at_end(head, 20);
-    insert_at_end(head, 30);
-    // print_list(head);
-    // head = insert_at_beg(head, 80);
-    insert_at_beg(&head, 70);
-    insert_at_beg(&head, 80);
-    insert_at_any(head, 4, 38);
-    // print_list(head);
-    delete_node(&head, 2);
-    print_list(head);
+    int choice = 0, data = 0;
+    while (choice != 6)
+    {
+        printf("Choose:\n1.Print List\n2.Insert at Begining\n3.Insert at end\n4.Insert at any place\n5.Delete\n6.Exit\n");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            print_list(head);
+            break;
+        case 2:
+            printf("data: ");
+            scanf("%d", &data);
+            insert_at_beg(&head, data);
+            break;
+        case 3:
+            printf("data: ");
+            scanf("%d", &data);
+            insert_at_end(head, data);
+            break;
+        case 4:
+            int pos = 0;
+            printf("position: ");
+            scanf("%d", &pos);
+            printf("data: ");
+            scanf("%d", &data);
+            insert_at_any(head, pos, data);
+            break;
+        case 5:
+            printf("position: ");
+            scanf("%d", &data);
+            delete_node(&head, data);
+            break;
+        }
+    }
+    return 0;
 }
