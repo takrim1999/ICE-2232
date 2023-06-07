@@ -21,6 +21,7 @@ void print_list(struct node *list)
             printf("%d\,", point->data);
             point = point->next;
         }
+        printf("\n");
     }
 }
 
@@ -28,19 +29,26 @@ void insert_at_end(struct node *list, int num)
 {
     struct node *point, *new;
     point = list;
-    while (point->next != NULL)
+    if (list == NULL)
     {
-        point = point->next;
+        insert_at_beg(&list, num);
     }
-    new = (struct node *)malloc(sizeof(struct node));
-    new->data = num;
-    new->next = NULL;
-    point->next = new;
+    else
+    {
+        while (point->next != NULL)
+        {
+            point = point->next;
+        }
+        new = (struct node *)malloc(sizeof(struct node));
+        new->data = num;
+        new->next = NULL;
+        point->next = new;
+    }
     // printf("%d\n", point->data);
 }
 
 // struct node *insert_at_beg(struct node *list, int num)
-insert_at_beg(struct node **list, int num)
+void insert_at_beg(struct node **list, int num)
 {
     struct node *point, *new;
     new = (struct node *)malloc(sizeof(struct node));
