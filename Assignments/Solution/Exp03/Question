@@ -1,0 +1,5 @@
+Create a Binary Tree, then
+1. Traverse Pre-order
+2. Traverse In-order
+3. Traverse Post-order
+4. Search an element, if found return Yes else No
